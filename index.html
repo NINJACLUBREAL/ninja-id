@@ -37,13 +37,12 @@
  // ... (rest of your JavaScript)
 
 // Extract redirect URL from current page URL
-const currentUrl = window.location.href; // Declare currentUrl here
+const currentUrl = window.location.href; 
 console.log("Current URL:", currentUrl); 
 const urlParams = new URLSearchParams(currentUrl.split('?')[1]);
 console.log("URL Params:", urlParams); 
-const redirectUrl = currentUrl.split('?')[1]; // Get everything after the '?'
-console.log("Redirect URL:", redirectUrl);
-// ... (rest of your code)
+const redirectUrl = urlParams.get('url'); // Get the value of the 'url' parameter
+console.log("Redirect URL:", redirectUrl); 
 
 
     // Redirect to the specified URL
